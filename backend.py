@@ -50,6 +50,12 @@ async def register_talent(email: str = Form(...), clearance: str = Form(...)):
         
     return {"message": "Talent lead captured successfully. Awaiting DISS."}
 
+from fastapi.responses import FileResponse
+
+@app.get("/pitch")
+async def pitch_deck():
+    return FileResponse("pitch.html")
+
 # Serve the static website natively 
 app.mount("/", StaticFiles(directory=".", html=True), name="static")
 
