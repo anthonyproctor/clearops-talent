@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 try {
                     const formData = new FormData();
                     formData.append('email', email);
-                    await fetch('/api/contractor', {
+                    await fetch('https://clearops-talent.onrender.com/api/contractor', {
                         method: 'POST',
                         body: formData
                     });
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const formData = new FormData();
                     formData.append('email', email);
                     formData.append('clearance', clearance);
-                    await fetch('/api/talent', {
+                    await fetch('https://clearops-talent.onrender.com/api/talent', {
                         method: 'POST',
                         body: formData
                     });
